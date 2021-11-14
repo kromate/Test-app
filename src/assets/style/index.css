@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+*{
+    font-family: 'Lato', sans-serif;
+}
+
+.btn{
+    @apply border border-primary rounded-xl px-10 py-3 text-lg text-primary hover:text-white hover:bg-primary
+}
