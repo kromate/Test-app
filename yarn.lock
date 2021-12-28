@@ -64,18 +64,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@googlemaps/js-api-loader@^1.11.1":
-  version "1.12.9"
-  resolved "https://registry.yarnpkg.com/@googlemaps/js-api-loader/-/js-api-loader-1.12.9.tgz#d9fdd8273aef27590d9254f9ae0573e9919ae4d1"
-  integrity sha512-pa0T5mCvmWIs3I7LGFm8naFhIsEvHMDG5IENJ67uhMLWLFy821L95V1Ez1Lo/Jvjh06UMg9L4DCiCxsmwnFglw==
-  dependencies:
-    fast-deep-equal "^3.1.3"
-
-"@headlessui/vue@^1.4.2":
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/@headlessui/vue/-/vue-1.4.2.tgz#1098f52cb6c583772708a980b3487222ac0ae65e"
-  integrity sha512-+uOaPwHncxHZ6JBwYycu3YxDDrY0v1tcxCtK04H1WGBLBm07dqVi38Q2RB7eY867FUhD0sL6q+Fj69rVn8P0OQ==
-
 "@humanwhocodes/config-array@^0.6.0":
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.6.0.tgz#b5621fdb3b32309d2d16575456cbc277fa8f021a"
@@ -1833,13 +1821,6 @@ magic-string@^0.25.7:
   dependencies:
     sourcemap-codec "^1.4.4"
 
-mdi-vue@1.4.5:
-  version "1.4.5"
-  resolved "https://registry.yarnpkg.com/mdi-vue/-/mdi-vue-1.4.5.tgz#54fa2a925ec5ff9cb696c9315058eb01f3c352d4"
-  integrity sha512-2EdgSj2XWzcIp4jp0R2uggn6aUtjG1PfoyH0R9qsC+Rex/RcvGscS69UafQ3OFo7pa3rBt4zrLfeUPvd4v/eZA==
-  dependencies:
-    vue "^2.6.10"
-
 media-typer@0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/media-typer/-/media-typer-0.3.0.tgz#8710d7af0aa626f8fffa1ce00168545263255748"
@@ -2795,11 +2776,6 @@ vue-router@^4.0.11:
   integrity sha512-CPXvfqe+mZLB1kBWssssTiWg4EQERyqJZes7USiqfW9B5N2x+nHlnsM1D3b5CaJ6qgCvMmYJnz+G0iWjNCvXrg==
   dependencies:
     "@vue/devtools-api" "^6.0.0-beta.18"
-
-vue@^2.6.10:
-  version "2.6.14"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.14.tgz#e51aa5250250d569a3fbad3a8a5a687d6036e235"
-  integrity sha512-x2284lgYvjOMj3Za7kqzRcUSxBboHqtgRE2zlos1qWaOye5yUmHn42LB1250NJBLRwEcdrB0JRwyPTEPhfQjiQ==
 
 vue@^3.2.16:
   version "3.2.20"
