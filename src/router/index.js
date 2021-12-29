@@ -9,6 +9,11 @@ const routes = [
     name: 'landing',
     component: Landing,
   },
+  {
+    path: '/login',
+    name: 'login',
+    component: ()=>import('../views/login.vue'),
+  },
 
 ]
 

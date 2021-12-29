@@ -1,0 +1,1 @@
+export const url = "https://wirepay-sandbox.herokuapp.com/v1/user/auth/login?version=2.0.0"
