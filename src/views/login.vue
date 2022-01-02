@@ -1,8 +1,8 @@
 <template>
   <Header/>
 
-  <div class="w-full  grid place-items-center h-80x container ">
-      <div class="w-full flex flex-col justify-center items-center">
+  <div class="w-full  grid place-items-center h-80x container mx-auto">
+      <div class="w-full flex flex-col justify-center items-center mx-auto">
       <h1 class="text-4xl font-bold text-center mb-16">
           Welcome Back
       </h1>
