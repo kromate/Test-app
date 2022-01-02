@@ -1,7 +1,7 @@
 <template>
   <Header/>
 
-  <div class="w-full  grid place-items-center h-80x">
+  <div class="w-full  grid place-items-center h-80x container ">
       <div class="w-full flex flex-col justify-center items-center">
       <h1 class="text-4xl font-bold text-center mb-16">
           Welcome Back
@@ -73,9 +73,11 @@ const password = ref('')
 <style scoped>
 .h-80x{
     height: 80vh;
+    
 }
 .w-96{
     width: 500px !important;
+    max-width: 90vw;
 }
 </style>
 
