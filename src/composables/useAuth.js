@@ -1,11 +1,13 @@
 import { reactive } from "vue";
 import { url } from "./constants";
+import { useRouter } from "vue-router";
 
-const global = reactive({
+export const global = reactive({
     authMsg:"",
     emailError:"",
     passwordError:"",
-    loading: false
+    loading: false,
+    authState: JSON.parse(localStorage.getItem("auth")) || null,
 })
 
 export const useLogin = (email, password)=>{
@@ -26,14 +28,16 @@ export const useLogin = (email, password)=>{
   .then(response => response.json())
   .then(data => {
       
-    console.log('this id ddfdf',data)
     if(!data.status){
-      global.loading = false
+       saveAuth(data.status)
      global.authMsg = data.message
-    }
+     global.loading = false
+     
+    }else{
+      saveAuth(data.status)
       global.loading = false
-      return data
-    
+      global.authMsg = data.message
+    }
     })
   .catch((err)=>{
       global.loading = false
@@ -77,3 +81,21 @@ export const useLogin = (email, password)=>{
      }
 
 };
+
+
+const saveAuth = (data)=>{
+  if(data){
+    localStorage.setItem("auth", JSON.stringify(data));
+    global.authState = data;
+    window.location.href = "/home"
+     global.loading = false
+  }
+    // localStorage.setItem("auth", data);
+}
+
+
+export const signOut = ()=>{
+    localStorage.removeItem("auth");
+    global.authState = null;
+  window.location.href = "/login"
+}
