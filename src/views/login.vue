@@ -8,6 +8,9 @@
       </h1>
 
       <form class="flex flex-col gap-6" @submit.prevent="submit">
+          <span class="text-center">
+               <p class="mt-1 text-purple-500 font-bold">{{global.authMsg}}  </p>
+          </span>
           <div class="flex flex-col">
               <label for="email" class="font-bold mb-2">
                   Email Address
