@@ -1,6 +1,5 @@
 import { reactive } from "vue";
 import { url } from "./constants";
-import { useRouter } from "vue-router";
 
 export const global = reactive({
     authMsg:"",
@@ -8,6 +7,7 @@ export const global = reactive({
     passwordError:"",
     loading: false,
     authState: JSON.parse(localStorage.getItem("auth")) || null,
+    userState: JSON.parse(localStorage.getItem("user")) || null,
 })
 
 export const useLogin = (email, password)=>{
@@ -20,7 +20,7 @@ export const useLogin = (email, password)=>{
     if(validate(email.value, password.value)){
       fetch(url, {
              method: "POST",
-    body: JSON.stringify({
+    body: new URLSearchParams({
         email: email.value,
         password: password.value,
     }),
@@ -28,13 +28,14 @@ export const useLogin = (email, password)=>{
   .then(response => response.json())
   .then(data => {
       
-    if(!data.status){
-       saveAuth(data.status)
+    if(!data.success){
+       saveAuth(data.success)
      global.authMsg = data.message
      global.loading = false
      
     }else{
-      saveAuth(data.status)
+      saveAuth(data.success)
+      saveUser(data.data)
       global.loading = false
       global.authMsg = data.message
     }
@@ -90,7 +91,15 @@ const saveAuth = (data)=>{
     window.location.href = "/home"
      global.loading = false
   }
-    // localStorage.setItem("auth", data);
+}
+
+const saveUser = (data)=>{
+  if(data){
+    localStorage.setItem("user", JSON.stringify(data));
+    global.userState = data;
+    window.location.href = "/home"
+     global.loading = false
+  }
 }
 
 
